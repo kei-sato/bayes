@@ -36,7 +36,7 @@ classifier.learn('terrible, shitty thing. Damn. Sucks!!', 'negative')
 // now ask it to categorize a document it has never seen before
 
 classifier.categorize('awesome, cool, amazing!! Yay.')
-// => 'positive'
+// => { category: 'positive', confidence: 0.7855155651739638 }
 
 // serialize the classifier's state as a JSON string.
 var stateJson = classifier.toJson()
@@ -68,7 +68,7 @@ Teach your classifier what `category` the `text` belongs to. The more you teach 
 
 ###`classifier.categorize(text)`
 
-Returns the `category` it thinks `text` belongs to. Its judgement is based on what you have taught it with **.learn()**.
+Returns the `category` it thinks `text` belongs to and the confidence of the classification. Its judgement is based on what you have taught it with **.learn()**.
 
 ###`classifier.toJson()`
 
