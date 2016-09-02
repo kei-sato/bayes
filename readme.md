@@ -36,7 +36,7 @@ classifier.learn('terrible, shitty thing. Damn. Sucks!!', 'negative')
 // now ask it to categorize a document it has never seen before
 
 classifier.categorize('awesome, cool, amazing!! Yay.')
-// => { category: 'positive', confidence: 0.7855155651739638 }
+// => { category: 'positive', confidence: 0.7331025373745276 }
 
 // serialize the classifier's state as a JSON string.
 var stateJson = classifier.toJson()
